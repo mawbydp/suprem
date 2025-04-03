@@ -32,7 +32,7 @@ DATADIR	= $(HERE)/../data
 
 #.. Which C and Fortran Compiler?
 CC	= gcc
-FC	= g77
+FC	= gfortran
 
 #.. What optimization level for the compilers?
 COPT	= -O2
@@ -94,10 +94,12 @@ MODELFILE = -DMODELLOC='"$(DATADIR)/modelrc"'
 IMP_FILE = -DIMPLOC='"$(DATADIR)/sup4gs.imp"'
 DATAFILES = $(MANDIR) $(KEYFILE) $(MODELFILE) $(IMP_FILE)
 
-LOCDEFS	= -DDEVICE -DHAVE_KSH -D$(SYS) -DNO_F77
+#LOCDEFS	= -DDEVICE -DHAVE_KSH -D$(SYS) -DNO_F77
+LOCDEFS = -DDEVICE -DSYSV -DNO_F77
+
 
 INCLUDE = $(GRINC) -Iinclude
-CFLAGS	= -c $(COPT) $(LOCDEFS) $(INCLUDE)
+CFLAGS = -fcommon -c $(COPT) $(LOCDEFS) $(INCLUDE)
 LFLAGS	= -v -n -q $(COPT) $(LOCDEFS) $(INCLUDE)
 FFLAGS	= -c $(FOPT)
 LDFLAGS	= $(COPT) $(LOCDEFS)
