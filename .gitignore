@@ -2,4 +2,6 @@
 *.o
 
 #Log files
-.log
+*.log
+
+arlib
