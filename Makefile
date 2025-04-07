@@ -45,13 +45,13 @@ DATADIR = $(HERE)/data
 #CC	= cc
 CC	= gcc
 #FC	= f77
-FC	= g77
+FC	= gfortran
 
 #.. What optimization level for the compilers?
-COPT	= -O2
-FOPT	= -O2
-#COPT	= -g
-#FOPT	= -g
+#COPT	= -O2
+#FOPT	= -O2
+COPT	= -g
+FOPT	= -g
 
 #.. One of two graphics options is supported and must be chosen at
 #.. compile time.  One is for X windows, (specific to X11R4), which
