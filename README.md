@@ -9,25 +9,16 @@ and cannot be built on GNU/Linux.
 This repository contains patched source files to allow compilation, without
 X11 support, on recent GNU/Linux operating systems.
 
-Actually it builds on:
-
-* Fedora 20 x86-64
-* Fedora 20 x86
-
-And it runs on:
-
-* Fedora 20 x86-64
-* Fedora 20 x86
-* Ubuntu 13.10 x86-64
+Actually it builds on Ubuntu 24.04.2 LTS.
 
 If you find other supported operating systems, please, fill an issue with
 instructions.
 
 ## Instructions
 
-### Fedora
+### Ubuntu
 
-    sudo yum install gcc compat-gcc-34-g77
+    mkdir bin
     make depend install
     ./suprem4gs
 
