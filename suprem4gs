@@ -9,7 +9,7 @@ SUP4MANDIR="$SUPREM4_HOME/help"
 
 export SUP4MANDIR SUP4KEYFILE SUP4MODELRC SUP4IMPDATA SUP4MANDIR
 
-exec "$SUPREM4_HOME/suprem" $*
+exec "$SUPREM4_HOME/bin/suprem" $*
 
 #should never get here!
 exit 1
