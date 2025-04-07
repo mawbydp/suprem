@@ -35,10 +35,10 @@ CC	= gcc
 FC	= gfortran
 
 #.. What optimization level for the compilers?
-COPT	= -O2
-FOPT	= -O2
-#COPT	= -g
-#FOPT	= -g
+#COPT	= -O2
+#FOPT	= -O2
+COPT	= -g
+FOPT	= -g
 
 #.. if you want the X11 plotting uncomment the following.
 #GRLIBS	= -lXaw -lXmu -lXt -lXext -lX11
